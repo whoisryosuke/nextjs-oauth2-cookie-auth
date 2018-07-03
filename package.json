@@ -20,9 +20,7 @@
     "next": "6.0.3",
     "react": "16.4.1",
     "react-cookie": "^2.2.0",
-    "react-dom": "16.4.1",
-    "universal-cookie": "^2.2.0",
-    "universal-cookie-express": "^2.2.0"
+    "react-dom": "16.4.1"
   },
   "license": "ISC"
 }
