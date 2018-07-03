@@ -1,6 +1,8 @@
-# SeshSource Dashboard
+# NextJS OAuth2 Authentication Example
 
-Dashboard for admins and organizers on [SeshSource.com](http://seshsource.com). Allows for CRUD functionality of events, tickets, etc.
+NextJS app that uses an external OAuth2 API to login users through a callback system, ultimately storing a JWT in a cookie.
+
+> Material UI is from an old project, you can just cut those chunks out if you want.
 
 ## Tools
 
@@ -16,7 +18,7 @@ Dashboard for admins and organizers on [SeshSource.com](http://seshsource.com). 
 
 Deploys an Express server, configured in the `server.js` file in project root, and builds the project using Next.
 
-### Admin / Organizer Access
+### User Accounts
 
 Spin up a development server, create a new account, and use those login details in this app. `AuthService` class assumes dev server is located at `http://localhost/`, but also accepts any URL when you make a "new" class (`new AuthService('http://localhost:4849')`). See the [seshsource-api](https://github.com/whoisryosuke/seshsource-api) repo for more details.
 
@@ -26,22 +28,10 @@ Spin up a development server, create a new account, and use those login details 
 
 ## Todo
 
-* [✅] - Redux implemented with NextJS
-* [✅] - Redux store persisted across reloads (redux-persist)
 * [✅] - Dynamic routing using Express
-* [✅] - Material UI implemented
-* [✅] - Basic Dashboard styling
-* [✅] - CRUD functionality for Events
 * [✅] - Login Authentication using OAuth2.0 / JWT tokens
 * [✅] - Protected/Authenticated Routes using HOCs (supporting SSR!)
 * [✅] - ENV files implemented using dotenv
 * [✅] - OAuth2 callback login using Express
 * [✅] - CSRF middleware protection for forms
 * [✅] - Cookie parser added
-* [] - Refactored any random `fetch()` calls in pages into a helper class
-* [] - Manage page - Convert `<List>` to `<Table>`
-* [] - Restyled theme with SeshSource colors/branding
-* [] - Added SeshSource logo
-* [] - Fix user auth check in Header (conditional that shows user profile icon on right side of header - maybe use localStorage token check for now - pass down authService prop drill)
-* [] - Add grid to Event Profile page
-* [] - Trigger refresh of Manage Events page when user creates event and is redirected (currently shows old data, maybe fetch again on React lifecycle)
